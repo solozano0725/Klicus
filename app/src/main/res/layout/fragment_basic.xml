@@ -1,0 +1,35 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|center"
+    android:orientation="vertical"
+    tools:context="klicus.app.klicus.Structure.BasicFragmentBV">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="@color/cardview_light_background" />
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottonNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:itemBackground="@color/colorPrimary"
+            app:itemIconTint="@drawable/botton_navigation_selector"
+            app:itemTextColor="@drawable/botton_navigation_selector"
+            app:menu="@menu/navigation_bottom" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

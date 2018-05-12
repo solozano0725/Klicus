@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ads"
+            android:icon="@drawable/ic_ads"
+            android:title="@string/nav_ads"
+            android:visible="true" />
+        <item
+            android:id="@+id/nav_promo"
+            android:icon="@drawable/ic_promo"
+            android:title="@string/nav_promo"
+            android:visible="true" />
+        <item
+            android:id="@+id/nav_gifts"
+            android:icon="@drawable/ic_event"
+            android:title="@string/nav_gift"
+            android:visible="true" />
+        <item
+            android:id="@+id/nav_jobs"
+            android:icon="@drawable/ic_jobs"
+            android:title="@string/nav_jobs"
+            android:visible="true" />
+    </group>
+
+    <item android:title="@string/info">
+        <menu>
+            <item
+                android:id="@+id/nav_us"
+                android:icon="@drawable/ic_us"
+                android:title="@string/nav_about"
+                android:visible="true" />
+            <item
+                android:id="@+id/nav_dev"
+                android:icon="@drawable/ic_dev"
+                android:title="@string/nav_dev"
+                android:visible="true" />
+        </menu>
+    </item>
+
+</menu>

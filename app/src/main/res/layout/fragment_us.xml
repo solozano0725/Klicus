@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="false"
+            android:contentDescription="@string/app_name"
+            android:cropToPadding="true"
+            android:elevation="20dp"
+            android:scaleType="center"
+            android:src="@drawable/klicuss_logo"
+            tools:targetApi="lollipop" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:elevation="5dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:lineSpacingExtra="10sp"
+            android:text="@string/ceo"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:elevation="5dp"
+            android:ellipsize="middle"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="16dp"
+            android:text="@string/slogan"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:targetApi="lollipop" />
+    </LinearLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_contact"
+        fab:fab_elevationCompat="@dimen/fab_size_normal"
+        fab:menu_backgroundColor="@color/colorWhiteSemiTransparent"
+        fab:menu_colorNormal="@color/colorPrimaryDark"
+        fab:menu_colorPressed="@color/colorPrimaryDark"
+        fab:menu_colorRipple="@color/colorPrimaryDark"
+        fab:menu_fab_label="@string/us"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_web"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_website"
+            fab:fab_colorDisabled="#797979"
+            fab:fab_colorNormal="@color/dropbox"
+            fab:fab_colorPressed="#797979"
+            fab:fab_colorRipple="@color/dropbox"
+            fab:fab_label="@string/website"
+            fab:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_ig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_instagram"
+            fab:fab_colorDisabled="#797979"
+            fab:fab_colorNormal="@color/instagram"
+            fab:fab_colorPressed="#797979"
+            fab:fab_colorRipple="@color/instagram"
+            fab:fab_label="@string/instagram"
+            fab:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_fb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_facebook"
+            fab:fab_colorDisabled="#797979"
+            fab:fab_colorNormal="@color/facebook"
+            fab:fab_colorPressed="#797979"
+            fab:fab_colorRipple="@color/facebook"
+            fab:fab_label="@string/facebook"
+            fab:fab_size="normal" />
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_gmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_google"
+            fab:fab_colorDisabled="#797979"
+            fab:fab_colorNormal="@color/googleplus"
+            fab:fab_colorPressed="#797979"
+            fab:fab_colorRipple="@color/googleplus"
+            fab:fab_label="@string/gmail"
+            fab:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_wasp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_whatsapp"
+            fab:fab_colorDisabled="#797979"
+            fab:fab_colorNormal="@color/whatsapp"
+            fab:fab_colorPressed="#797979"
+            fab:fab_colorRipple="@color/whatsapp"
+            fab:fab_label="@string/whatsapp"
+            fab:fab_size="normal" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

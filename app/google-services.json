@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "628500326291",
+    "firebase_url": "https://klicus-4b8a7.firebaseio.com",
+    "project_id": "klicus-4b8a7",
+    "storage_bucket": "klicus-4b8a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628500326291:android:f7bb81588dc20971",
+        "android_client_info": {
+          "package_name": "klicus.app.klicus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628500326291-9dtkc2a7fa8qpmg8kqj2hme8a6ibkrsf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "klicus.app.klicus",
+            "certificate_hash": "49dade6a27d6bd46ec84ea919e715eb6765c3acc"
+          }
+        },
+        {
+          "client_id": "628500326291-mvte42amsqropljnpgs30ei1ccrb5eun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDs9cA5DV6BS1hmoseoKQPd0eSDQVCnpF0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628500326291-mvte42amsqropljnpgs30ei1ccrb5eun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

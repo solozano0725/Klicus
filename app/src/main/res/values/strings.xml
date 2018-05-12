@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">Klicus</string>
+
+    <string name="text_button_login">Entra y encuentra lo que buscas</string>
+    <string name="dont_have_account">Participa por nuestro premios, \t</string>
+    <string name="create_here"> registrandote aqui.</string>
+    <string name="title_activity_registration">Regístrate</string>
+
+    <string name="id">Documento de Identidad</string>
+    <string name="user">Usuario</string>
+    <string name="name">Nombre Completo</string>
+    <string name="email">Correo Electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="passwordConfirmation">Confirmar Contraseña</string>
+    <string name="button_createUser">Únete</string>
+    <string name="tittle_createUser">Crear Cuenta</string>
+    <string name="error_email">El campo e-mail no tiene el formato correcto (abc@abc.com).</string>
+    <string name="emptytext">No puede haber campo vacíos en los datos solicitados.</string>
+    <string name="passdifer">Las contraseñas ingresadas son diferentes.</string>
+    <string name="success">El correo ha sido correctamente registrado.</string>
+    <string name="email_klicus">www.klicus.com</string>
+    <string name="dvby">Desarrollado por:</string>
+    <string name="name_dv">SL</string>
+    <string name="slogan">Somos una empresa que busca proyectar tu negocio en la región, y por eso somos tu mejor opción para anunciar tu negocio, para que tu información este a la mano de tus clientes.</string>
+
+    <string name="title_dialog">Confirmación de Registro</string>
+    <string name="message_dialog">¿Está seguro de la información ingresada?</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="nav_main">Inicio</string>
+    <string name="nav_ads">Anuncios</string>
+    <string name="nav_promo">Promociones</string>
+    <string name="nav_gift">Eventos</string>
+    <string name="nav_jobs">Empleos</string>
+    <string name="info">Información</string>
+    <string name="nav_about">Nosotros</string>
+    <string name="nav_dev">Desarrollado por</string>
+
+    <string name="nav_listfor">Listar por</string>
+    <string name="nav_muni">Municipios</string>
+    <string name="nav_category">Categorías</string>
+
+    <string name="linkedin">LinkedIn</string>
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="gmail">Gmail</string>
+    <string name="website">Website</string>
+    <string name="us">Contáctanos</string>
+    <string name="ceo">CEO: Alexander Julio Sánchez.</string>
+    <string name="link_fb">https://www.facebook.com/alexanderjulio</string>
+    <string name="link_ig">https://www.instagram.com/alexjulio</string>
+    <string name="link_wasp">https://api.whatsapp.com/send?phone=573135328897</string>
+    <string name="link_website">http://klicus.com</string>
+    <string name="link_email">mailto:ajulios123@gmail.com</string>
+    <string name="link_subject">¡Tengo una pregunta sobre Klicus!</string>
+    <string name="link_subject_all">Tengo una pregunta sobre: \t</string>
+    <string name="error_mail">No se encontró aplicación de mensajería. Comunicarse al correo: ajulios123@gmail.com</string>
+
+
+    <string name="navigation_drawer_open">Abrir cajón</string>
+    <string name="navigation_drawer_close">Cerrar cajón</string>
+    <string name="no_have">No tiene.</string>
+    <string name="prueba">Prueba</string>
+
+    <string name="tel">Teléfono:</string>
+    <string name="boss">Dueño: \t</string>
+    <string name="cel">Celular: \t</string>
+    <string name="mail">Correo Electrónico: \t</string>
+    <string name="hour">Horario: \t</string>
+    <string name="domi">Domicilio: \t</string>
+    <string name="social">Redes Sociales: \t</string>
+
+    <string name="nocontent_title">Próximamente</string>
+    <string name="nocontent">No tenemos contenido aun.\n Comunícate con administración\npara anunciarte.</string>
+
+    <string name="nofound_title">No hay información.</string>
+    <string name="nofound">No tenemos contenido aun de este item.</string>
+    <string name="usclient">Nuestros Anunciantes</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_content_e">ContentE</string>
+    <string name="title_activity_content_j">ContentJ</string>
+
+    <string name="date">Fecha: </string>
+    <string name="place">Lugar: </string>
+    <string name="contact">Contacto: </string>
+    <string name="description">Descripcion: </string>
+    <string name="company">Empresa: </string>
+
+    <string name="search">Buscar...</string>
+</resources>

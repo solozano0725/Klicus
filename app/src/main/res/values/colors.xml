@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e1e000</color>
+    <color name="colorPrimaryDark">#0e2143</color>
+    <color name="colorAccent">#918918</color>
+    <color name="ediTextColorWhite">#FFFFFF</color>
+    <color name="ediTextColorBlack">#000000</color>
+    <color name="backgroundtext_card">#b6292929</color>
+    <color name="colorLime">#CDDC39</color>
+    <color name="colorWhiteSemiTransparent">#B3FFFFFF</color>
+
+    <color name="tab_checked">#918918</color>
+    <color name="tab_unchecked">#FFFFFF</color>
+
+</resources>
