@@ -9,10 +9,10 @@
     </style>
 
     <style name="buttonDark" parent="Theme.AppCompat.Light">
-        <item name="colorButtonNormal">@color/colorPrimaryDark</item>
-        <item name="colorControlNormal">@color/colorPrimary</item>
-        <item name="android:textColor">@android:color/white</item>
-    </style>
+    <item name="colorButtonNormal">@color/colorPrimaryDark</item>
+    <item name="colorControlNormal">@color/colorPrimary</item>
+    <item name="android:textColor">@android:color/white</item>
+</style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>

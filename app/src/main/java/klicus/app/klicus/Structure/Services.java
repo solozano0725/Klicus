@@ -41,6 +41,7 @@ import klicus.app.klicus.R;
 
 public class Services {
 
+
     public Services(){}
 
     public ArrayList<Cate_Loca_Type> loadSpinner(DatabaseReference db, final ArrayList<Cate_Loca_Type> array, final MaterialSpinner spinner, final Activity activity){
