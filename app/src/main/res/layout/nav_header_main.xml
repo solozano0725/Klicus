@@ -14,30 +14,30 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/app_name"
+        android:layout_width="79dp"
+        android:layout_height="86dp"
+        android:contentDescription="@string/nav_header_desc"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:scaleType="fitStart"
-        app:srcCompat="@drawable/klicus_splash" />
+        app:srcCompat="@drawable/klicus_" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/app_name"
+        android:text="@string/nav_header_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold" />
+        android:textSize="24sp"
+        app:fontFamily="@font/antipastopro_bold" />
 
     <TextView
-        android:id="@+id/txtWebOf"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/email_klicus"
-        android:textColor="@color/ediTextColorBlack"
-        android:textStyle="bold" />
+        android:text="@string/nav_header_subtitle"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:fontFamily="@font/antipastopro_medium" />
 
 </LinearLayout>

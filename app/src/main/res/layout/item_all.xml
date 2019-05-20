@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewAll"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_marginBottom="10dp"
+    cardview:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundtext_card"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageViewAll"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorPrimaryDark"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            tools:targetApi="lollipop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_margin="5dp"
+            android:background="@color/backgroundtext_card"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:paddingTop="0dp">
+
+            <TextView
+                android:id="@+id/titleAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/antipastopro_medium"
+                android:text="@string/app_name"
+                android:textAlignment="center"
+                android:textColor="@color/ediTextColorWhite"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/subtitleAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/ediTextColorWhite"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

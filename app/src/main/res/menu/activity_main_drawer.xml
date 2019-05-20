@@ -5,39 +5,41 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/nav_home"
+            android:title="@string/nav_home" />
+        <item
             android:id="@+id/nav_ads"
-            android:icon="@drawable/ic_ads"
-            android:title="@string/nav_ads"
-            android:visible="true" />
+            android:icon="@drawable/nav_ads"
+            android:title="@string/nav_ads" />
         <item
             android:id="@+id/nav_promo"
-            android:icon="@drawable/ic_promo"
-            android:title="@string/nav_promo"
-            android:visible="true" />
+            android:icon="@drawable/nav_promo"
+            android:title="@string/nav_promo" />
         <item
-            android:id="@+id/nav_gifts"
-            android:icon="@drawable/ic_event"
-            android:title="@string/nav_gift"
-            android:visible="true" />
+            android:id="@+id/nav_event"
+            android:icon="@drawable/nav_event"
+            android:title="@string/nav_event" />
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/nav_news"
+            android:title="@string/nav_news" />
         <item
             android:id="@+id/nav_jobs"
             android:icon="@drawable/ic_jobs"
-            android:title="@string/nav_jobs"
-            android:visible="true" />
+            android:title="@string/nav_jobs" />
     </group>
 
-    <item android:title="@string/info">
+    <item android:title="@string/nav_info">
         <menu>
             <item
-                android:id="@+id/nav_us"
-                android:icon="@drawable/ic_us"
-                android:title="@string/nav_about"
-                android:visible="true" />
+                android:id="@+id/nav_signin"
+                android:icon="@drawable/nav_signin"
+                android:title="@string/nav_signin" />
             <item
-                android:id="@+id/nav_dev"
-                android:icon="@drawable/ic_dev"
-                android:title="@string/nav_dev"
-                android:visible="true" />
+                android:id="@+id/nav_aboutus"
+                android:icon="@drawable/nav_aboutus"
+                android:title="@string/nav_aboutus" />
         </menu>
     </item>
 

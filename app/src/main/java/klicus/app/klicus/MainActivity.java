@@ -1,78 +1,59 @@
 package klicus.app.klicus;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AppCompatDelegate;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-import klicus.app.klicus.Ads.Ads;
-import klicus.app.klicus.EventJobs.BasicFragment2;
-import klicus.app.klicus.MainR.RecyclerViewMain;
-import klicus.app.klicus.Structure.BasicFragmentBV;
-import klicus.app.klicus.Structure.Services;
-import klicus.app.klicus.UsAndDev.FragmentDev;
-import klicus.app.klicus.UsAndDev.FragmentUs;
+import klicus.app.klicus.commons.CommonUtil;
+import klicus.app.klicus.data.Services;
+import klicus.app.klicus.entity.News;
+import klicus.app.klicus.structure.FragmentG;
+
+import static klicus.app.klicus.commons.CommonConstants.arrayDBCategory;
+import static klicus.app.klicus.commons.CommonConstants.db;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    FirebaseDatabase db;
+    ArrayList<News> arrayList;
     RecyclerView recyclerView;
-    ArrayList<Ads> arrayAds;
-    private int count = 0;
-    MenuItem searchItem;
-    SearchView searchView;
-    RecyclerViewMain rvm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setContentView(R.layout.main_activity);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        toolbar.setPadding(5,15,5,10);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        TextView txt = navigationView.getHeaderView(0).findViewById(R.id.txtWebOf);
-        txt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.link_website)));
-                startActivity(i);
-            }
-        });
-        recyclerView = findViewById(R.id.rvMain);
-        arrayAds = new ArrayList<>();
-        db = FirebaseDatabase.getInstance("https://klicus-4b8a7.firebaseio.com");
+        setSubtitle();
 
-        Services services = new Services();
-        rvm = services.loadMain(db.getReference("ADS"), arrayAds, recyclerView, this, searchView);
+        recyclerView = findViewById(R.id.rvMain);
+        arrayList = new ArrayList<>();
+        Services s = new Services();
+
+        s.loadNews(db.getReference(arrayDBCategory[4]), recyclerView, this);
 
     }
 
@@ -80,98 +61,71 @@ public class MainActivity extends AppCompatActivity
     public void onBackPressed() {
         if(getSupportFragmentManager().getBackStackEntryCount() == 0){
             super.onBackPressed();
-        } else{
+         } else{
             getSupportFragmentManager().popBackStack();
-           setTitleSubtitle();
+            CommonUtil.setTitleSubtitle(getSupportActionBar(), this, getResources().getString(R.string.nav_home));
         }
 
     }
 
-    public void setTitleSubtitle(){
-        try{
-            if(!getSupportActionBar().getSubtitle().toString().equalsIgnoreCase(getString(R.string.nav_main))){
-                getSupportActionBar().setTitle(R.string.app_name);
-                getSupportActionBar().setSubtitle(R.string.nav_main);
-            }
-        }catch(Exception e){
-            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
         int id = item.getItemId();
+
         Fragment fragment = null;
 
-        if (id == R.id.nav_ads) {
-            count++;
-            fragment = BasicFragmentBV.getInstace(0);
+        if (id == R.id.nav_home) {
+           // if(getSupportFragmentManager().getBackStackEntryCount()>0){
+                getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                startActivity(new Intent(this, MainActivity.class));
+            //}
+        } else if (id == R.id.nav_ads) {
+            fragment = FragmentG.getInstance(0, getResources().getString(R.string.nav_ads));
+
         } else if (id == R.id.nav_promo) {
-            count++;
-            fragment = BasicFragmentBV.getInstace(1);
-        }else if (id == R.id.nav_gifts) {
-            //fragment = new NoContent();
-            count++;
-            fragment = BasicFragment2.getInstace(0);
+            fragment = FragmentG.getInstance(1, getResources().getString(R.string.nav_promo));
+
+        } else if (id == R.id.nav_event) {
+            fragment = FragmentG.getInstance(2, getResources().getString(R.string.nav_event));
+
+        } else if (id == R.id.nav_news) {
+            fragment = FragmentG.getInstance(3, getResources().getString(R.string.nav_news));
+
         } else if (id == R.id.nav_jobs) {
-            //fragment = new NoContent();
-            count++;
-            fragment = BasicFragment2.getInstace(1);
-        } else if (id == R.id.nav_us) {
-            count++;
+            fragment = FragmentG.getInstance(4, getResources().getString(R.string.nav_jobs));
+
+        } else if (id == R.id.nav_signin) {
+            fragment = new FragmentRegist();
+
+        } else if (id == R.id.nav_aboutus) {
             fragment = new FragmentUs();
-        } else if (id == R.id.nav_dev) {
-            count++;
-            fragment = new FragmentDev();
         }
 
-        if(count>0){
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_main, fragment).addToBackStack(null).commit();
-        } else{
-            getSupportFragmentManager().beginTransaction().add(R.id.content_main, fragment).addToBackStack(null).commit();
+        if(fragment!=null){
+            if(getSupportFragmentManager().getBackStackEntryCount()>0){
+                getSupportFragmentManager().beginTransaction().replace(R.id.content_main, fragment).addToBackStack(null).commit();
+            } else{
+                getSupportFragmentManager().beginTransaction().add(R.id.content_main, fragment).addToBackStack(null).commit();
+            }
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
-
-   @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_search, menu);
-
-        searchItem = menu.findItem(R.id.search);
-        searchView = (SearchView) searchItem.getActionView();
-
-        searchView.setQueryHint(getText(R.string.search));
-        changeAdapter(rvm);
-        return super.onCreateOptionsMenu(menu);
+    public void setSubtitle(){
+        getSupportActionBar().setTitle(R.string.app_name);
+        getSupportActionBar().setSubtitle(R.string.nav_home);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
-
-    public void changeAdapter(RecyclerViewMain rvm){
-        searchView.setQueryHint(getText(R.string.search));
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-
-                Toast.makeText(MainActivity.this, "hola", Toast.LENGTH_SHORT).show();
-                //se oculta el EditText
-                searchView.setQuery("", false);
-                searchView.setIconified(true);
-                return true;
-            }
-            @Override
-            public boolean onQueryTextChange(String newText) {
-
-
-                Toast.makeText(MainActivity.this, "holaaa", Toast.LENGTH_SHORT).show();
-                return true;
-            }
-        });
-    }
-
 
 }

@@ -21,6 +21,6 @@
         android:contentDescription="@string/app_name"
         android:cropToPadding="false"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/klicus_splash" />
+        app:srcCompat="@drawable/klicus_" />
 
 </RelativeLayout>

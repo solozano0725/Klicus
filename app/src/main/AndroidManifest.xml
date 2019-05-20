@@ -2,9 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="klicus.app.klicus">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Main"
+            android:name=".ActivityMain"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -33,19 +30,25 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".RegistrationActivity"
-            android:label="@string/title_activity_registration"
+            android:name=".structure.all.ads.DetailsAds"
+            android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Structure.ContentFB"
+            android:name=".structure.all.job.DetailsJob"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
-        <activity android:name=".EventJobs.ContentE"
+        <activity
+            android:name=".structure.all.event.DetailsEvent"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
-        <activity android:name=".EventJobs.ContentJ"
+        <activity
+            android:name=".structure.all.clasif.DetailsClasif"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" ></activity>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".structure.home.DetailsMain"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

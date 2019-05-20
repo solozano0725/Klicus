@@ -44,7 +44,7 @@ public class SplashScreenAnimated extends AppCompatActivity implements Runnable 
                         sleep(100);
                         waited += 100;
                     }
-                    Intent intent = new Intent(SplashScreenAnimated.this, Main.class);
+                    Intent intent = new Intent(SplashScreenAnimated.this, ActivityMain.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     SplashScreenAnimated.this.finish();

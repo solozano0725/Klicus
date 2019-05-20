@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">Klicus</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="nav_header_title">Klicus</string>
+    <string name="nav_header_subtitle">¡Tu APP de Confianza!</string>
+
 
     <string name="text_button_login">Entra y encuentra lo que buscas</string>
     <string name="dont_have_account">Participa por nuestro premios, \t</string>
@@ -27,18 +36,17 @@
     <string name="message_dialog">¿Está seguro de la información ingresada?</string>
     <string name="yes">Si</string>
     <string name="no">No</string>
-    <string name="nav_main">Inicio</string>
-    <string name="nav_ads">Anuncios</string>
-    <string name="nav_promo">Promociones</string>
-    <string name="nav_gift">Eventos</string>
-    <string name="nav_jobs">Empleos</string>
-    <string name="info">Información</string>
-    <string name="nav_about">Nosotros</string>
-    <string name="nav_dev">Desarrollado por</string>
 
-    <string name="nav_listfor">Listar por</string>
-    <string name="nav_muni">Municipios</string>
-    <string name="nav_category">Categorías</string>
+    <string name="nav_aboutus">Acerca de</string>
+    <string name="nav_ads">Anuncios</string>
+    <string name="nav_event">Eventos</string>
+    <string name="nav_home">Inicio</string>
+    <string name="nav_news">Clasificados</string>
+    <string name="nav_jobs">Empleos</string>
+    <string name="nav_promo">Promociones</string>
+    <string name="nav_signin">Regístrate</string>
+    <string name="nav_info">Información</string>
+    <string name="news">Noticias</string>
 
     <string name="linkedin">LinkedIn</string>
     <string name="facebook">Facebook</string>
@@ -56,13 +64,9 @@
     <string name="link_subject">¡Tengo una pregunta sobre Klicus!</string>
     <string name="link_subject_all">Tengo una pregunta sobre: \t</string>
     <string name="error_mail">No se encontró aplicación de mensajería. Comunicarse al correo: ajulios123@gmail.com</string>
-
-
-    <string name="navigation_drawer_open">Abrir cajón</string>
-    <string name="navigation_drawer_close">Cerrar cajón</string>
     <string name="no_have">No tiene.</string>
-    <string name="prueba">Prueba</string>
 
+    <string name="prueba">Prueba</string>
     <string name="tel">Teléfono:</string>
     <string name="boss">Dueño: \t</string>
     <string name="cel">Celular: \t</string>
@@ -70,22 +74,15 @@
     <string name="hour">Horario: \t</string>
     <string name="domi">Domicilio: \t</string>
     <string name="social">Redes Sociales: \t</string>
-
-    <string name="nocontent_title">Próximamente</string>
-    <string name="nocontent">No tenemos contenido aun.\n Comunícate con administración\npara anunciarte.</string>
-
-    <string name="nofound_title">No hay información.</string>
-    <string name="nofound">No tenemos contenido aun de este item.</string>
-    <string name="usclient">Nuestros Anunciantes</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_content_e">ContentE</string>
-    <string name="title_activity_content_j">ContentJ</string>
-
     <string name="date">Fecha: </string>
     <string name="place">Lugar: </string>
     <string name="contact">Contacto: </string>
-    <string name="description">Descripcion: </string>
-    <string name="company">Empresa: </string>
 
-    <string name="search">Buscar...</string>
+    <string name="company">Empresa: </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">Descripción:</string>
+    <string name="address">Dirección:</string>
+
+
 </resources>
